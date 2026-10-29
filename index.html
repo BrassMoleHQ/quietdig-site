@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <meta name="description" content="Quiet funded startups, verified weekly. Startups that just filed a private raise with the SEC, with senior engineering roles live on their own job boards.">
-<title>Quiet Dig: quiet funded startups, verified weekly</title>
+<title>Quiet Dig: quiet funded startups. Verified.</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#f7f6f3;color:#1f2321;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%;overflow-wrap:anywhere}
@@ -32,17 +32,37 @@ ol{margin:0;padding:0 0 0 22px}
 ol li{margin:0 0 12px}
 ol li b{font-weight:600}
 footer{border-top:1px solid #dcdad4;margin-top:56px;padding-top:20px;font-size:13px;color:#6b716d;line-height:1.6}
+.signup{margin:0 0 48px}
+.signup label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6b716d;margin:0 0 10px}
+.signup .row{display:flex;flex-direction:column;gap:14px}
+.signup input[type=email]{width:100%;min-height:52px;border:1px solid #dcdad4;border-radius:10px;padding:0 16px;font:inherit;background:#fff;color:#1f2321}
+.signup input[type=email]:focus-visible,.signup button:focus-visible{outline:2px solid #3f6b5c;outline-offset:2px}
+.signup .btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;border-radius:10px;font:inherit;font-weight:600;cursor:pointer;background:#3f6b5c;color:#fff;border:0}
+.signup .btn:hover{background:#2b4d41}
+.signup .note{font-size:14px;color:#555b57;margin:12px 0 0}
+.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+@media (min-width:480px){.signup .row{flex-direction:row}.signup input[type=email]{flex:1}.signup .btn{width:auto;padding:0 22px;white-space:nowrap}}
 </style>
 </head>
 <body>
 <main>
 <p class="mark">Quiet Dig</p>
-<h1>Quiet funded startups, verified weekly.</h1>
+<h1>Quiet funded startups. Verified.</h1>
 <ul class="lede">
 <li>Each week, startups that just filed a private raise with the SEC.</li>
 <li>Senior engineering roles listed when they are live on the company's own job board.</li>
 <li>Quiet ones first: no news for the exact company name in 90 days.</li>
 </ul>
+
+<form class="signup" method="post" action="{{EXEC_URL}}" accept-charset="UTF-8">
+<label for="email">Your email</label>
+<div class="row">
+<input type="email" id="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="you@firm.com">
+<div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+<button type="submit" class="btn">Get the weekly dig</button>
+</div>
+<p class="note">We confirm each request by email within a few days. One plain-text issue a week; unsubscribe in every issue.</p>
+</form>
 
 <p class="lbl">Sample entry</p>
 <article class="card">
